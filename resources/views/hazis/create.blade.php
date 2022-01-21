@@ -13,26 +13,33 @@
             <p>{{ $error }}</p>
         @endforeach
     @endif
-    <form method='POST' action="{{ route('statues.store') }}">
+    <form method='POST' action="{{ route('hazis.store') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div>
-            Person:<br>
-            <input type="text" name="person" value="{{ old('person') }}">
-            @error('person')
+            Diák:<br>
+            <input type="text" name="diak" value="{{ old('diak') }}">
+            @error('diak')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
-            Height:<br>
-            <input type="number" name="height" value="{{ old('height') }}">
-            @error('height')
+            Url kód:<br>
+            <input type="text" name="url" value="{{ old('url') }}">
+            @error('url')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
-            Price:<br>
-            <input type="number" name="price" value="{{ old('price') }}">
-            @error('price')
+            Jegy:<br>
+            <input type="number" name="jegy" value="{{ old('jegy') }}">
+            @error('jegy')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+        <div>
+            Értékelés:<br>
+            <input type="text" name="ertekeles" value="{{ old('ertekeles') }}">
+            @error('ertekeles')
                 <p>{{ $message }}</p>
             @enderror
         </div>
@@ -40,5 +47,6 @@
             <input type="submit" value="Create">
         </div>
     </form>
+    
 </body>
 </html>

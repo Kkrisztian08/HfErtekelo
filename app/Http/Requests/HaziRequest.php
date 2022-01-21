@@ -24,7 +24,7 @@ class HaziRequest extends FormRequest
     public function rules()
     {
         return [
-            'diák' =>'required|min:10',
+            'diak' =>'required|min:3',
             'url' =>'required|',
             'jegy' =>'required|numeric|min:1|max:5',
             'ertekeles'=>'required|max:1000',

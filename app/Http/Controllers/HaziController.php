@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\HaziRequest;
 use App\Models\Hazi;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,13 @@ class HaziController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HaziRequest $request)
     {
-        //
+        $adatok = $request->only(['diak', 'url', 'jegy','ertekeles']);
+        $hazi = new Hazi();
+        $hazi->fill($adatok);
+        $hazi->save();
+        return redirect()->route('hazis.index');
     }
 
     /**
@@ -56,9 +61,9 @@ class HaziController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Hazi $hazi)
     {
-        //
+        return view('hazis.edit', ['hazis'=> $hazi]);
     }
 
     /**
@@ -68,9 +73,12 @@ class HaziController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Hazi $hazi)
     {
-        //
+        $adatok = $request->only(['diak', 'url', 'jegy','ertekeles']);
+        $hazi->fill($adatok);
+        $hazi->save();
+        return redirect()->route('hazis.show', $hazi->id);
     }
 
     /**
