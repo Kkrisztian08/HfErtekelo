@@ -9,11 +9,13 @@ class Hazi extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['diak', 'url'];
+    protected $fillable = ['diak', 'url','jegy','ertekeles'];
 
     protected $visible = [
         'id',
         'diak',
         'url',
+        'jegy',
+        'ertekeles',
     ];
 }

@@ -17,8 +17,11 @@ class HaziFactory extends Factory
             "diak"=>$this->faker->name(),
             "url"=>$this->faker->url(),
             "jegy"=>$this->faker->numberBetween(1,5),
-            "ertekeles"=>$this->faker->text(),
+            //"jegy"=>"",
+            "ertekeles"=>$this->faker->text(), 
+            //"ertekeles"=>"", //uresként kéne beletenni a db-be és majd egy külön linken/gombal lehessen jegyet és értékelést adni 
             //"osztaly" =>$this->faker->numberBetween(9,12)+" "+randomLetter(),
+
         ];
     }
 }
