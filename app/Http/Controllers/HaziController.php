@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\HaziRequest;
+use App\Http\Requests\HaziUpdateRequest;
 use App\Models\Hazi;
 use Illuminate\Http\Request;
 
@@ -69,11 +70,11 @@ class HaziController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\HaziUpdateRequest  $request
      * @param  \App\Models\Hazi  $hazi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hazi $hazi)
+    public function update(HaziUpdateRequest $request, Hazi $hazi)
     {
         $adatok = $request->only(['diak', 'url', 'jegy','ertekeles']);
         $hazi->fill($adatok);
