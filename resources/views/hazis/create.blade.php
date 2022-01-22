@@ -24,16 +24,16 @@
         </div>
         <div>
             Url kód:<br>
-            <input type="text" name="url" value="{{ old('url') }}">
+            <input type="text" name="url" value="{{ old('url') }}"> <!--jelenjen meg a https:// izé az input elejébe (kényelmi funció)-->
             @error('url')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
-            <input type="hidden" name="jegy" value="{{ old('jegy') }}">
+            <input type="hidden" name="jegy" value="1">
         </div>
         <div>
-            <input type="hidden" name="ertekeles" value="{{ old('ertekeles') }}">
+            <input type="hidden" name="ertekeles" value="nincs">
         </div>
         <div>
             <br>
