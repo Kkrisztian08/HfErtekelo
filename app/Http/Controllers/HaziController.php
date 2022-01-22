@@ -47,7 +47,7 @@ class HaziController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hazi  $hazi
      * @return \Illuminate\Http\Response
      */
     public function show(Hazi $hazi)
@@ -58,7 +58,7 @@ class HaziController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hazi  $hazi
      * @return \Illuminate\Http\Response
      */
     public function edit(Hazi $hazi)
@@ -70,7 +70,7 @@ class HaziController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Hazi  $hazi
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Hazi $hazi)
@@ -84,7 +84,7 @@ class HaziController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hazi  $hazi
      * @return \Illuminate\Http\Response
      */
     public function destroy(Hazi $hazi)
