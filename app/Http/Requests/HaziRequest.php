@@ -26,8 +26,8 @@ class HaziRequest extends FormRequest
         return [
             'diak' =>'required|min:3',
             'url' =>'required|',
-            'jegy' =>'required|numeric|min:1|max:5',
-            'ertekeles'=>'required|max:1000',
+            //'jegy' =>'required|numeric|min:1|max:5',
+            //'ertekeles'=>'required|max:1000',
         ];
     }
 }

@@ -14,6 +14,6 @@ class HaziSeeder extends Seeder
      */
     public function run()
     {
-        Hazi::factory(10)->create();
+        Hazi::factory(20)->create();
     }
 }

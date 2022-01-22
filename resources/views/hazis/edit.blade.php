@@ -7,30 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-<h1>{{ $hazis->diak }} adatainak szerkesztése</h1>
+<h1>{{ $hazis->diak }} munkájának értékelése</h1>
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    @endif
     <form method='POST' action="{{ route('hazis.update', $hazis->id) }}">
         @method('PATCH')
         @csrf
         <div>
-            Diák:<br>
-            <input type="text" name="diak" value="{{ $hazis->diak }}">
+            <input type="hidden" name="diak" value="{{ $hazis->diak }}">
         </div>
         <div>
-            Url:<br>
-            <input type="text" name="url" value="{{ $hazis->url }}">
+            <input type="hidden" name="url" value="{{ $hazis->url }}">
         </div>
         <div>
             Jegy:<br>
             <input type="number" name="jegy" value="{{ $hazis->jegy }}">
+            @error('jegy')
+                <p>{{ $message }}</p>
+            @enderror
         </div>
         <div>
-            Értékelés:<br>
+            Szöveges értékelés:<br>
             <input type="text" name="ertekeles" value="{{ $hazis->ertekeles }}">
+            @error('ertekeles')
+                <p>{{ $message }}</p>
+            @enderror
         </div>
         <div>
+            <br>
             <input type="submit" value="Edit">
-        </div>
-        
+        </div> 
     </form>
+    <h3><a href="{{ route('hazis.show', $hazis->id) }}">Vissza az előző oldalra</a></h3>
 </body>
 </html>

@@ -30,23 +30,17 @@
             @enderror
         </div>
         <div>
-            Jegy:<br>
-            <input type="number" name="jegy" value="{{ old('jegy') }}">
-            @error('jegy')
-                <p>{{ $message }}</p>
-            @enderror
+            <input type="hidden" name="jegy" value="{{ old('jegy') }}">
         </div>
         <div>
-            Értékelés:<br>
-            <input type="text" name="ertekeles" value="{{ old('ertekeles') }}">
-            @error('ertekeles')
-                <p>{{ $message }}</p>
-            @enderror
+            <input type="hidden" name="ertekeles" value="{{ old('ertekeles') }}">
         </div>
         <div>
+            <br>
             <input type="submit" value="Create">
         </div>
     </form>
+    <h3><a href="{{ route('hazis.index') }}">Vissza az előző oldalra</a></h3>
     
 </body>
 </html>
