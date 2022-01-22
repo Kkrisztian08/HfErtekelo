@@ -41,6 +41,9 @@
             <input type="submit" value="Edit">
         </div> 
     </form>
-    <h3><a href="{{ route('hazis.show', $hazis->id) }}">Vissza az előző oldalra</a></h3>
+    <form action="{{ route('hazis.show', $hazis->id) }}">
+        <br>
+        <button type="submit">Vissza az előző oldalra</button>
+    </form>
 </body>
 </html>

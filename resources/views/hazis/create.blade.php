@@ -40,7 +40,10 @@
             <input type="submit" value="Create">
         </div>
     </form>
-    <h3><a href="{{ route('hazis.index') }}">Vissza az előző oldalra</a></h3>
+    <form action="{{ route('hazis.index') }}">
+        <br>
+        <button type="submit">Vissza az előző oldalra</button>
+    </form>
     
 </body>
 </html>

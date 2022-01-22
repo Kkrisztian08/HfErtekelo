@@ -24,8 +24,8 @@ class HaziUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'jegy'=> 'required|numeric|integer|min:1|max:5',
-            'ertekeles'=>'required|string|min:1|max:200'
+            'jegy' =>'required|numeric|min:1|max:5',
+            'ertekeles'=>'required|min:1|max:200',
         ];
     }
 }

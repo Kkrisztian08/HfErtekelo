@@ -32,7 +32,14 @@
         </tr>
         @endforeach
     </table>
-    <h3><a href="{{ route('hazis.create') }}">Új házifeladat hozzáadása</a></h3>
-    <p><a href="{{ route('home') }}">Vissza a főoldalra</a></p>
+
+    <form action="{{ route('hazis.create') }}">
+        <br>
+        <button type="submit">Új házifeladat hozzáadása</button>
+    </form>
+    <form action="{{ route('home') }}">
+        <br>
+        <button type="submit">Vissza a főoldalra</button>
+    </form>
 </body>
 </html>

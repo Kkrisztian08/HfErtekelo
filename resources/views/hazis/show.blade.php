@@ -11,7 +11,13 @@
     <h3>Érdemjegy: {{ $hazis->jegy}}</h3>
     <p>Url kód: {{ $hazis->url }}</p>
     <p>Szöveges értékelés:<br> {{ $hazis->ertekeles }}</p>
-    <h3><a href="{{ route('hazis.edit', $hazis->id) }}">Értékelés és modositás</a></h3>
-    <h3><a href="{{ route('hazis.index') }}">Vissza az előző oldalra</a></h3>
+    <form action="{{ route('hazis.edit', $hazis->id) }}">
+        <br>
+        <button type="submit">Értékelés és modositás</button>
+    </form>
+    <form action="{{ route('hazis.index') }}">
+        <br>
+        <button type="submit">Vissza az előző oldalra</button>
+    </form>
 </body>
 </html>

@@ -9,8 +9,9 @@
 <body>
 <h1>Üdvözlöm a Lala értékelő rendszerében</h1>
     <p>Összes beadott munka: {{ $haziCount }}</p>
-    <p>
-        <a href="{{ route('hazis.index') }}">Lássuk a házikat</a>
-    </p>
+    <form action="{{ route('hazis.index') }}">
+        <br>
+        <button type="submit">Lássuk a házikat</button>
+    </form>
 </body>
 </html>
