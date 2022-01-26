@@ -18,7 +18,7 @@ class HaziFactory extends Factory
             "url"=>$this->faker->url(),
             //"jegy"=>$this->faker->numberBetween(1,5),
             "jegy"=>$this->faker->numberBetween(1,1),
-            "ertekeles"=>"", 
+            "ertekeles"=>"nincs", 
             //"osztaly" =>$this->faker->numberBetween(9,12)+" "+randomLetter(),
 
         ];

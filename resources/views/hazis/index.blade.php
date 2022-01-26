@@ -12,7 +12,7 @@
             <th>Diák</th>
             <th>A házifeladat Url kódja</th>
             <th>Érdemjegy</th>
-            <th>Visszajelzés</th>
+            <th>Szöveges értékelés</th>
         </tr>
         @foreach ($hazis as $hazi)
         <tr>

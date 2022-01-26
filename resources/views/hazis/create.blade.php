@@ -33,7 +33,7 @@
             <input type="hidden" name="jegy" value="1">
         </div>
         <div>
-            <input type="hidden" name="ertekeles" value="nincs">
+            <input type="hidden" name="ertekeles" value="nincs"> 
         </div>
         <div>
             <br>
@@ -44,6 +44,5 @@
         <br>
         <button type="submit">Vissza az előző oldalra</button>
     </form>
-    
 </body>
 </html>

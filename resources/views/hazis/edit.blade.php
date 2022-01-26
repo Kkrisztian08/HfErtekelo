@@ -23,22 +23,27 @@
             <input type="hidden" name="url" value="{{ $hazis->url }}">
         </div>
         <div>
-            Jegy:<br>
-            <input type="number" name="jegy" value="{{ $hazis->jegy }}">
-            @error('jegy')
-                <p>{{ $message }}</p>
-            @enderror
+            Jegy:
+            <select name="jegy">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
         </div>
         <div>
             Szöveges értékelés:<br>
-            <input type="text" name="ertekeles" value="{{ $hazis->ertekeles }}">
+            <textarea name="ertekeles">{{ $hazis->ertekeles }}</textarea>
+            <!--<input type="text" name="ertekeles" value="{{ $hazis->ertekeles }}">-->
             @error('ertekeles')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
             <br>
-            <input type="submit" value="Edit">
+            <input type="submit" value="Értékelés">
         </div> 
     </form>
     <form action="{{ route('hazis.show', $hazis->id) }}">
